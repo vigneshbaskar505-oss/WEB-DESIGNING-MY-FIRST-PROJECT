@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- addEventListener => used mainly in all industry
+     
+    Syntax:
+
+     Elementname.addEventListener('eventName',functionname)
+      -->
+
+    <!-- instead of onclick , we use addEventListener -->
+
+    <h1 id="hlo">Hello World</h1>
+    <button id="btn">Click </button>
+
+    <!-- another Example  -->
+     <button id="like">Like <span>👍</span></button>
+     <button id="dislike">Dislike <span>👎</span></button>
+
+    <script>
+        let h1=document.getElementById("hlo")
+       let btn= document.getElementById("btn")
+    //   function without name= anonymous function
+       btn.addEventListener('click',function(){
+        h1.textContent="Hello Guys"
+
+       })
+
+
+    //    like and dislike event
+
+    let like=document.getElementById("like")
+    let dislike=document.getElementById("dislike")
+
+    // for like button
+    let lcount=0
+    like.addEventListener('click',function(){
+        like.innerHTML=lcount
+        lcount++
+
+    })
+
+    // for dislike button
+
+    let dcount=0
+    dislike.addEventListener('click',function(){
+        dislike.innerHTML=dcount
+        dcount++
+
+    })
+
+
+    </script>
+
+
+</body>
+</html>

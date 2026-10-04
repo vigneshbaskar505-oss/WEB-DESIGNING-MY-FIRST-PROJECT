@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Arrays - represented by [] squarebracket
+     1. Stores data of same datatype
+     2. Array size should be known in advance
+     3. Array values can be accessed by index position -->
+
+     <script>
+        let arr=[10,20,30,40,50]
+        // console.log(arr);
+
+        // console.log(arr[3]);
+        // arr[4]=100 //access by index position
+        // console.log(arr);
+
+        // Array methods
+
+        // 1. push - insert value at end 
+
+        arr.push(200)
+        console.log(arr);
+
+        // 2. pop - delete at end
+        arr.pop()
+        console.log(arr);
+        
+        // 3. unshift - insert at begin
+
+        arr.unshift(100)
+        console.log(arr);
+
+        // 4. shift - delete at begin
+
+        arr.shift()
+        console.log(arr);
+
+        // 5. splice - remove or replace the values using index position
+
+        // arr.splice(0,3) //3 =3-1= upto 2  values
+        // format: splice(indexvalue,number of elements to remove (n-1))
+        // console.log(arr);
+
+        arr.splice(0,3,20,30,90)
+        console.log(arr);
+        
+
+        // 6. slice - show only needed part
+        
+        console.log(arr.slice(0,3));//0-2 values print
+
+
+        // 7. some - checks the condition and returns output as boolean : true/false
+
+        let arr2=[23,45,55,89,199]
+        // arrow function- ()=>{}
+        console.log(arr2.some((x)=>{
+            if(x>=40) 
+        return x}));
+        
+
+        // 8. filter method - check the condition and return the filtered value
+     let arr3=[23,45,55,89,199]
+        // arrow function- ()=>{}
+        console.log(arr3.filter((x)=>{
+            if(x>=40) 
+        return x}));
+
+
+        // 9. map method - to assign values to the array 
+        let marks=[45,56,78,90,79]
+        console.log(marks.map((a)=>{
+            return  a=a+10
+        }));
+
+        // arrow function
+
+        let sqr=(n)=>{ return n*n}
+        console.log(sqr(20));
+
+        // for loop likely we have another loop => forEach
+        let arr4=[34,89,78,56,45]
+       arr4.forEach((n)=>{ console.log(n)})
+
+
+       //  join - convert array into string
+       let arr5=["Apple","Banana","Grapes"]
+    //    console.log(arr5);
+       
+       let str=arr5.join("|")  
+       console.log(str);
+
+    //    split - convert string into array
+    let str2="Welcome to Programming"
+    let newarr=str2.split("-")
+    console.log(newarr);
+    
+
+       
+
+         
+        
+        
+        
+        
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+     </script>
+</body>
+</html>

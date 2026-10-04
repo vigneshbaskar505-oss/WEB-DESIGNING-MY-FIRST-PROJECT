@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- using Class Name -->
+     <!-- <h1 class="hlo">Welcome</h1>
+     <button onclick="show()">Click</button> -->
+
+     <!-- querySelector => can access id, class even tag name 
+      => it returns only first element 
+      -->
+
+
+      <!-- querySelectorAll =>  it returns all the elements-->
+     <!-- <h1 class="helo">One</h1>
+     <h1 class="helo">two</h1>
+     <h1 class="helo">three</h1>
+     <button onclick="disp()">Show here</button> -->
+
+     <!-- by tagname - (task) -->
+
+     <!-- append, prepend 
+      insertAdjacentHTML - beforebegin,afterbegin-->
+
+     <div id="app">
+
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+     </div>
+
+     <script>
+
+        let app=document.getElementById("app")
+        let h1=document.createElement("h1")
+        h1.textContent="Web Designing"
+        // app.append(h1)
+        // app.prepend(h1)
+        // app.insertAdjacentElement("afterend",h1)
+
+
+        function disp(){
+            let h1=document.querySelectorAll(".helo")
+           
+            for(let i=0;i<h1.length;i++){
+
+                console.log(h1[i].textContent);
+            }
+            
+        }
+
+
+
+
+
+        // by class name
+        function show(){
+            let hlo=document.getElementsByClassName(".hlo")
+            hlo.textContent="Hello world"
+            console.log(hlo);
+            
+        }
+     </script>
+</body>
+</html>
